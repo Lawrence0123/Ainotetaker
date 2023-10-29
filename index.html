@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+      integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <title>AI NOTE TAKER</title>
+  </head>
+  <body>
+    <!-- Back to top button -->
+    <button
+      type="button"
+      class="btn btn-danger btn-floating btn-lg shadow"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <div class="top-bar">
+      <div class="container d-flex justify-content-end p-2">
+        <div class="social-links d-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-envelope"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-telegram"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <!--Main Navigation-->
+    <header>
+      <!-- Sidebar -->
+      <nav
+        id="sidebarMenu"
+        class="collapse collapse-horizontal sidebar collapse bg-white"
+        style="transition: none !important"
+      >
+        <div class="position-sticky">
+          <div
+            class="close"
+            id="close"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu"
+            aria-controls="sidebarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <strong>&times;</strong>
+          </div>
+          <div class="sidelinks mx-3 mt-5">
+            <button class="btn my-3 btn-primary side-btn">Buy Now</button>
+            <a href="#" class="side-link p-3 active">
+              <span>Home</span>
+            </a>
+            <a href="#" class="side-link p-3 ripple"><span>Create</span> </a>
+            <a href="#" class="side-link p-3 ripple"><span>About Us</span></a>
+            <a href="#" class="side-link p-3 ripple"
+              ><span>Tokenomics</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Sidebar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm" id="navbar_top">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center justify-content-center"
+          href="#"
+        >
+          <img
+            src="./img/logo.png"
+            alt=""
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+
+          <span class="d-none d-lg-block">&nbsp;AI NOTE TAKER</span>
+        </a>
+
+        <button class="btn btn-primary d-lg-none">Start for free</button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <img src="./img/toggler.png" class="img-fluid" alt="" />
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mb-2 ms-auto mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Create</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Tokenomics</a>
+            </li>
+          </ul>
+          <div class="d-flex ms-auto">
+            <a href="AI NOTETAKER whitepaper.pdf" class="btn shadow-sm mx-2"
+              >Whitepaper</a
+            >
+            <button class="btn btn-primary">Start for free</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="heading shadow-sm">
+      <div class="hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 p-4 hero-text" data-aos="fade-right">
+              <h3>Welcome To</h3>
+              <h1>AI NOTE TAKER.</h1>
+              <h2>Transcribe audio files to text.</h2>
+              <p class="mt-3">
+                Utilize our speech-to-text transcription technology to
+                transcribe audio files to text. With AI Note Taker cutting edge
+                AI, you will get editable, searchable transcripts in minutes.
+              </p>
+              <button class="btn btn-primary py-2 px-3 mt-3">
+                <i class="bi bi-arrow-right"></i>&nbsp; Start Now
+              </button>
+            </div>
+            <div
+              class="col-lg-6 position-relative pt-4"
+              style="height: 400px !important"
+              data-aos="fade-left"
+            >
+              <img src="./img/hero1.png" class="hero1 img-fluid" alt="" />
+              <img src="./img/hero2.png" class="hero2 img-fluid" alt="" />
+              <img src="./img/hero3.png" class="hero3 img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-container mt-4 p-3">
+        <div class="row">
+          <div
+            class="col-md-3 col-4 display-item text-center"
+            data-aos="fade-up"
+          >
+            <h1>3</h1>
+            <p>Years of Development</p>
+          </div>
+          <div
+            class="col-md-2 col-4 display-item text-center"
+            data-aos="fade-down"
+          >
+            <h1>10+</h1>
+            <p>Years of team experience</p>
+          </div>
+          <div
+            class="col-md-2 col-4 display-item text-center"
+            data-aos="fade-up"
+          >
+            <h1>&#8734;</h1>
+            <p>Words transcription</p>
+          </div>
+          <div
+            class="col-md-2 col-6 display-item text-center"
+            data-aos="fade-down"
+          >
+            <h1>12k</h1>
+            <p>Human Transcribers equals AiNoteTaker</p>
+          </div>
+          <div
+            class="col-md-3 col-6 display-item text-center"
+            data-aos="fade-up"
+          >
+            <h1>24/7</h1>
+            <p>Zero down time</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container" data-aos="fade-up">
+      <div class="my-card p-4 my-3 mt-5 shadow">
+        <div class="row">
+          <div
+            class="col-md-6 p-4 d-flex justify-content-center flex-column"
+            data-aos="fade-right"
+          >
+            <h1 class="card-h1">ELEVATE CONVERSATIONS AIMLESSLY</h1>
+            <p class="card-p mt-4">
+              AI NoteTaker transforms spoken words into meaningful text
+              effortlessly. Whether in voice chats, Twitter spaces, or any
+              conversation, our AI captures key points, turning discussions into
+              actionable insights
+            </p>
+            <button
+              class="btn btn-primary mt-3 float-start card-b"
+              style="background-color: #7652b7 !important"
+            >
+              <i class="bi bi-arrow-right"></i>&nbsp; START FOR FREE
+            </button>
+          </div>
+          <div class="col-md-6 p-4" data-aos="fade-left">
+            <img src="./img/card1.png" alt="card" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+      <div class="my-card p-4 my-3 mt-5 shadow" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-6 p-4" data-aos="left">
+            <img src="./img/card2.png" alt="card" class="img-fluid" />
+          </div>
+          <div
+            class="col-md-6 p-4 d-flex justify-content-center flex-column"
+            data-aos="fade-right"
+          >
+            <h1 class="card-h1">CONVERTING AUDIO AND VIDEO TO TEXT</h1>
+            <p class="card-p mt-4">
+              Beey will automatically convert your videos, podcasts, meeting
+              minutes, online meetings, interviews, recorded lectures or files
+              from the Internet to text.Our state-of-the-art technology provides
+              more than 90% precision for most English, German and Czech
+              recordings.
+            </p>
+            <button
+              class="btn btn-primary mt-3 float-start card-b"
+              style="background-color: #2362f5 !important"
+            >
+              <i class="bi bi-arrow-right"></i>&nbsp; START FOR FREE
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="my-card p-4 my-3 mt-5 shadow" data-aos="fade-up">
+        <div class="row">
+          <div
+            class="col-md-6 p-4 d-flex justify-content-center flex-column"
+            data-aos="fade-right"
+          >
+            <h1 class="card-h1">PRIVACY - YOUR CONVERSATION, YOUR CONTROL</h1>
+            <p class="card-p mt-4">
+              We prioritize your privacy. AI NoteTaker  operates with strict
+              confidentiality protocols, ensuring your discussions remain
+              private and secure. Your trust is our commitment.
+            </p>
+            <button
+              class="btn btn-primary mt-3 float-start card-b"
+              style="background-color: #7652b7 !important"
+            >
+              <i class="bi bi-arrow-right"></i>&nbsp; START FOR FREE
+            </button>
+          </div>
+          <div class="col-md-6 p-4" data-aos="fade-left">
+            <img src="./img/card3.png" alt="card" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+      <div class="my-card p-4 my-3 mt-5 shadow" data-aos="fade-up">
+        <div class="row">
+          <div class="col-md-6 p-4" data-aos="fade-left">
+            <img src="./img/card4.png" alt="card" class="img-fluid" />
+          </div>
+          <div
+            class="col-md-6 p-4 d-flex justify-content-center flex-column"
+            data-aos="fade-right"
+          >
+            <h1 class="card-h1">REAL TIME NOTE TAKING - INSTANT PRECISION</h1>
+            <p class="card-p mt-4">
+              Experience the power of real-time note-taking. AI NoteTaker
+              captures details as they unfold, ensuring you never miss a
+              critical point. Precision, immediacy, and reliability, all in one.
+            </p>
+            <button
+              class="btn btn-primary mt-3 float-start card-b"
+              style="background-color: #2362f5 !important"
+            >
+              <i class="bi bi-arrow-right"></i>&nbsp; START FOR FREE
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container p-3 d-none d-md-block">
+      <div class="row">
+        <div class="col-md-6 p-4 text-center" data-aos="fade-right">
+          <div class="text-center">
+            <img src="./img/tokenomicsimg.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <div
+          class="col-md-6 p-4 d-flex justify-content-center align-items-center flex-column position-relative"
+          data-aos="fade-left"
+        >
+          <div class="token-wrapper p-4">
+            <h2 class="mb-3">Tokenomics</h2>
+            <p>Total supply: 20,000 000</p>
+            <p>Token for liquidity: 15,000,000(%75)</p>
+            <p>Market cap: $10,000</p>
+
+            <button class="btn btn-primary text-center buybtn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container p-3 d-md-none">
+      <div class="row">
+        <div class="col-md-6 p-2 text-center" data-aos="fade-right">
+          <div class="text-center token-wrapper">
+            <h2 class="mb-3">Tokenomics</h2>
+            <img src="./img/tokenomicsimg.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <div
+          class="col-md-6 p-2 d-flex justify-content-center align-items-center flex-column position-relative"
+          data-aos="fade-left"
+        >
+          <div class="token-wrapper p-4">
+            <p>Total supply: 20,000 000</p>
+            <p>Token for liquidity: 15,000,000(%75)</p>
+            <p>Market cap: $10,000</p>
+
+            <button class="btn btn-primary text-center buybtn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-5 text-center">
+      <img
+        src="./img/howitworks.png"
+        alt=""
+        class="img-fluid"
+        data-aos="zoom-in"
+      />
+      <div class="row mt-3">
+        <div class="col-md-4 p-3" data-aos="fade-up">
+          <div class="card card1 mb-2">
+            <div class="card-body p-4">
+              <h5 class="card-title mb-4 p-3">VOICE INTERACTION</h5>
+              <p class="card-text">
+                Engage in your conversation naturally our AI NoteTaker
+                effortlessly adapts to your voice and speech patterns.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3" data-aos="fade-up">
+          <div class="card card2 mb-2">
+            <div class="card-body p-4">
+              <h5 class="card-title mb-4 p-3">QUICK PROCESSING</h5>
+              <p class="card-text">
+                As you speak, our advanced algorithms process your words
+                instantaneously, transforming them to written text.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3 mb-2" data-aos="fade-up">
+          <div class="card card3">
+            <div class="card-body p-4">
+              <h5 class="card-title mb-4 p-3">VOICE INTERACTION</h5>
+              <p class="card-text">
+                Engage in your conversation naturally our AI NoteTaker
+                effortlessly adapts to your voice and speech patterns.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="container p-4 mt-2 text-center about justify-content-center align-items-center d-flex flex-column"
+      id="about"
+      data-aos="zoom-in"
+    >
+      <img src="./img/aboutus.png" alt="" class="img-fluid" />
+      <p class="mx-auto mt-3 px-md-5">
+        At AiNoteTaker, we bring your words to life. Our cutting-edge AI Note
+        Taker seamlessly captures your conversations, ensuring every valuable
+        detail is preserved. Whether you’re engaging in virtual conferences,
+        participating in voice chats, or exploring the vast realm of Twitter
+        spaces, our advanced technology transforms spoken words into actionable
+        insights
+      </p>
+      <button
+        class="btn btn-primary"
+        style="background-color: #7652b7 !important"
+      >
+        <i class="bi bi-arrow-right"></i>&nbsp; START FOR FREE
+      </button>
+    </section>
+
+    <section class="container p-4 mt-2 mb-4 review">
+      <div class="text-center" data-aos="zoom-in">
+        <h1 class="reviews">REVIEWS</h1>
+        <img src="./img/gooogle.png" alt="" class="img-fluid" />
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 p-3 d-flex align-items-stretch" data-aos="fade-up">
+          <div class="card mb-2 card-1">
+            <div class="card-body p-4">
+              <h1 class="card-title mt-3 mb-3 text-left quote">
+                <img src="./img/quotes1.png" alt="" class="img-fluid" />
+              </h1>
+              <p class="card-text">
+                Ai NoteTaker has revolutionized our virtual meetings. The
+                accuracy and speed of their transcription service are
+                unparalleled. It’s like having a personal secretary for every
+                conversation! Our team can now focus on brainstorming ideas
+                instead of worrying about missing crucial points. Ai NoteTaker
+                truly understands the rhythm of our discussions, making our
+                collaborations more productive.
+              </p>
+              <div class="author row mt-4">
+                <div class="col-3">
+                  <img src="./img/review.png" alt="" class="img-fluid" />
+                </div>
+                <div class="col-9" style="margin-left: -15px">
+                  <p>
+                    Sarah <br />
+                    CEO of TechGenius Inc.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3 d-flex align-items-stretch" data-aos="fade-up">
+          <div class="card mb-2 card-2">
+            <div class="card-body p-4">
+              <h1 class="card-title mt-3 mb-3 text-left quote">
+                <img src="./img/quotes2.png" alt="" class="img-fluid" />
+              </h1>
+              <p class="card-text">
+                Ai NoteTaker’s ability to capture different languages accurately
+                has made collaboration smoother and more inclusive. As a project
+                manager, I heavily rely on detailed transcriptions for
+                follow-ups and documentation. With Ai NoteTaker , I can
+                seamlessly switch between Spanish and English, ensuring nothing
+                gets lost in translation. This tool has become an essential part
+                of our daily workflow, boosting our team’s efficiency.
+              </p>
+              <div class="author row mt-4">
+                <div class="col-3">
+                  <img src="./img/review.png" alt="" class="img-fluid" />
+                </div>
+                <div class="col-9" style="margin-left: -15px">
+                  <p>
+                    Miguel <br />
+                    Project Manager at Global Connect:
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3 d-flex align-items-stretch" data-aos="fade-up">
+          <div class="card mb-2 card-3">
+            <div class="card-body p-4">
+              <h1 class="card-title mt-3 mb-3 text-left quote">
+                <img src="./img/quotes3.png" alt="" class="img-fluid" />
+              </h1>
+              <p class="card-text">
+                I’m a language teacher, and Ai NoteTaker has transformed my
+                virtual classrooms. The tool’s ability to capture diverse
+                accents and expressions ensures my lessons are accurately
+                transcribed. It’s particularly helpful when teaching
+                pronunciation and language nuances. My students appreciate the
+                detailed transcripts, enhancing their learning experience. Ai
+                NoteTaker has become my trusted companion in the world of online
+                education.
+              </p>
+              <div class="author row mt-4">
+                <div class="col-3">
+                  <img src="./img/review.png" alt="" class="img-fluid" />
+                </div>
+                <div class="col-9" style="margin-left: -15px">
+                  <p>
+                    Elena <br />
+                    Educator and Language Enthusiast
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-4 d-none d-md-block">
+      <div class="empty p-4">
+        <div class="row">
+          <div
+            class="col-md-5 p-4 d-flex justify-content-center flex-column position-relative"
+            data-aos="fade-right"
+          >
+            <h2 class="text-white empty-h2">
+              Fast, Accurate and Easy Transcription
+            </h2>
+            <a href="" class="btn btn-primary empty-btn mt-3"
+              ><span>Start for free <i class="bi bi-arrow-right"></i></span
+            ></a>
+            <img
+              src="./img/bottomline.png"
+              class="img-fluid line"
+              width="150"
+              alt=""
+            />
+          </div>
+          <div
+            class="col-md-7 p-4 position-relative"
+            style="padding-top: 55px !important"
+            data-aos="fade-left"
+          >
+            <img
+              src="./img/bottomimg.png"
+              style="width: 90%"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="ab">
+              <img
+                src="./img/bottommic.png"
+                width="80"
+                alt=""
+                class="img-fluid mic"
+              /><img
+                src="./img/bottomfolder.png"
+                width="80"
+                alt=""
+                class="img-fluid fold"
+              /><img
+                src="./img/bottommsg.png"
+                alt=""
+                class="img-fluid msg"
+                width="80"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mb-4 d-md-none">
+      <div class="empty p-4">
+        <div class="row">
+          <div
+            class="col-md-7 p-4 position-relative"
+            data-aos="fade-left"
+            style="
+              padding-top: 55px !important;
+              padding-bottom: 50px !important;
+            "
+          >
+            <div class="text-center">
+              <img
+                src="./img/bottomimg.png"
+                style="width: 90%"
+                class="img-fluid mx-auto"
+                alt=""
+              />
+            </div>
+
+            <div class="ab">
+              <img
+                src="./img/bottommic.png"
+                width="60"
+                alt=""
+                class="img-fluid mic"
+              /><img
+                src="./img/bottomfolder.png"
+                width="60"
+                alt=""
+                class="img-fluid fold"
+              /><img
+                src="./img/bottommsg.png"
+                alt=""
+                class="img-fluid msg"
+                width="60"
+              />
+            </div>
+          </div>
+          <div
+            class="col-md-5 p-4 d-flex justify-content-center flex-column position-relative align-items-center"
+            data-aos="fade-right"
+          >
+            <h2 class="text-white empty-h2">
+              Fast, Accurate and Easy Transcription
+            </h2>
+            <a href="" class="btn btn-primary empty-btn mt-3"
+              ><span>Start for free <i class="bi bi-arrow-right"></i></span
+            ></a>
+            <img
+              src="./img/bottomline.png"
+              class="img-fluid line"
+              width="150"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container mt-3">
+      <div
+        class="footer-top d-flex flex-column flex-md-row align-content-center justify-content-between text-center"
+      >
+        <div class="brand p-3">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./img/logo.png"
+              alt=""
+              width="30"
+              height="30"
+              class="d-inline-block align-text-top"
+            />
+
+            &nbsp;AI NOTE TAKER
+          </a>
+        </div>
+        <div class="nav-links p-3">
+          <a href="#" class="active">Home</a>
+          <a href="#">Create</a>
+          <a href="#about">About Us</a>
+        </div>
+        <div class="socials p-3">
+          <div
+            class="social-links d-flex align-items-center justify-content-center"
+          >
+            <a href="#" class="twitter"><i class="bi bi-envelope"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-telegram"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="divider my-2"></div>
+      <p class="text-center p-3 copyright">Copyright © 2023 AI NOTE TAKER</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 400) {
+            document.getElementById("navbar_top").classList.add("fixed-top");
+            // add padding top to show content behind navbar
+            navbar_height = document.querySelector(".navbar").offsetHeight;
+            document.body.style.paddingTop = navbar_height + "px";
+          } else {
+            document.getElementById("navbar_top").classList.remove("fixed-top");
+            // remove padding top from body
+            document.body.style.paddingTop = "0";
+          }
+        });
+      });
+
+      //Get the button
+      let mybutton = document.getElementById("btn-back-to-top");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      mybutton.addEventListener("click", backToTop);
+
+      function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
